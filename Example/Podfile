@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'DXDAToolsKit_Example' do
+  pod 'DXDAToolsKit', :path => '../'
+
+  target 'DXDAToolsKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

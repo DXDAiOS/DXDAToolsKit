@@ -1,0 +1,6 @@
+framework module DXDAToolsKit {
+  umbrella header "DXDAToolsKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

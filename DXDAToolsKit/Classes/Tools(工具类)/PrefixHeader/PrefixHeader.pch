@@ -1,0 +1,227 @@
+//
+//  PrefixHeader.pch
+//  NewApp3.0
+//
+//  Created by Erowin on 16/10/22.
+//  Copyright © 2016年 DXDA. All rights reserved.
+//
+#ifdef __OBJC__
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define appSName 1
+
+#if appSName == 1
+#import "动力云测试-Swift.h"
+#elif appSName == 2
+#import "企业动力云-Swift.h"
+#elif appSName == 3
+#import "动力云内测-Swift.h"
+#elif appSName == 4
+#import "易采集-Swift.h"
+#else
+#import "易采集入门-Swift.h"
+#endif
+
+
+// 第三方文件
+#import "MJRefresh.h"
+#import "MJExtension.h"
+//#import "SVProgressHUD.h"
+#import "Masonry.h"
+#import "ZLPhotoActionSheet.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+
+#import "EaseUI.h"
+#import <Hyphenate/Hyphenate.h>
+// 为1 可以使用语音通话
+#define DEMO_CALL 0
+#import "ConversationListController.h"
+#import "ChatDemoUIDefine.h"
+#import "EMAlertView.h"
+#import "TTGlobalUICommon.h"
+#import "MainViewController.h"
+
+
+#import <Foundation/Foundation.h>
+typedef enum : NSUInteger {
+    
+    controllerStyeCustomer,///邀请客户
+    controllerStyeColleague,///邀请同事
+    controllerStyeVendor///邀请供应商
+    
+} ControllerStye;
+#import "NSObject+DXDADisplayName.h"
+
+//#define DisplayName [NSObject APPDisplayName]
+//#import DisplayName
+///设置字体大小
+#import "UIButton+DXDAFont.h"
+#import "UIImage+DXDAImage.h"
+//#import "SVProgressHUD+Exel.h"
+#import "UIView+CHViewExel.h"
+#import "UserInfoManager.h"
+#import "WebServiceManager.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIView+Category.h"
+//如果项目中设置了导航条为不透明，即[UINavigationBar appearance].translucent=NO，那么这里的kViewHeight需要-64
+
+#import "DXDATools.h"
+
+// ccz convenience
+#import "UILabel+Convenience.h"
+#import "UITextField+Convenience.h"
+#import "UIButton+Convenience.h"
+
+#import "DXDACalculateView.h"
+#import "CRMTimeSearchView.h"
+#import "DXDASingleton.h"
+#import "SKArchCutter.h"
+#import "DXDAEmptyNewsView.h"
+#import "UIViewController+DXDAAuthorityTipsView.h"
+#import "DXDACZSearchView.h"
+#import "UIViewController+CCZLoadingView.h"
+#import "UIBarButtonItem+Convenience.h"
+#import "DXDAAuthorityManager.h"
+#import "UIResponder+DXDASelfManager.h"
+#import "NSObject+BoolType.h"
+#import "DXDAMark.h"
+#import "UIViewController+DXDAAlterViewController.h"
+#import "DXDADefaultRequestModel.h"
+#import "DXDAExternStaticString.h"
+#import "NSObject+DXDAAmountFormula.h"
+#import "UITableViewCell+InitCell.h"
+#import "XWScanImage.h"
+#import "EdgeInsetsLabel.h"
+#import "DXDADefalutOrderListHeaderView.h"
+#import "DXDADepartmentModel.h"
+#import "DXDAFormulaModel.h"
+
+// 省市区
+#import "KKAreaPicker.h"
+#import "KKStringPicker.h"
+#import "KKDateTimePicker.h"
+#import "KKRangePicker.h"
+
+#import "DXDAPayOutBodyDetailController.h"
+#import "DXDAAFNetworkManager.h"
+#import "DXDFBasicConfiguration.h"
+
+#import "DXDAFMDBListOcManager.h"
+#import "Interface.h"
+#import "DXDAAppConfiguration.h"
+#import "NSString+DXDANSString_Category.h"  // NSString 通用处理
+#import "NSString+DXDANSDate_Category.h"    // 时间String 处理
+#import "NSString+DXDAHash_Category.h"      // Hash 处理
+#import "NSObject+DXDAObject_Category.h"    // NSOobject 通用处理
+#import "NSString+DXDAString.h"             // NSString 通用处理
+#import "GetUserAuthority.h"                // 获取用户系统权限
+#import "DXDASelectPhotoManager.h"          // 图片框
+#import "SwipeTableCell.h"                  // cell 右滑控件
+#import "UIImage+compress.h"
+#import "YZTagList.h"
+#import "DXDAzpDateModel.h"
+//换肤
+#import "Global.h"
+#import "MyThemes.h"
+#import "UIColor+Dark.h"
+
+// 金融平台 DXDF
+#import "DXDFBasicConfiguration.h"
+//BlocksKit
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/A2DynamicDelegate.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+//ReactiveObjC
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "DXDANormalTools.h"
+
+//MARK: - APP配置文字
+static NSString *const equal = @"=";
+static NSString *const greater = @">";
+static NSString *const less = @"<";
+static NSString *const less_equal = @"<=";
+static NSString *const greater_equal = @">=";
+
+
+//MARK: - APP配置
+/*
+ * 修改AppType, 修改配置文件DXDAAppConfiguration, 配置相应的APP
+ *
+ * 企业动力云
+ * IosMSCApp
+ 
+ * (内测)企业动力云 正式环境测试版 （无法使用更新版本）
+ * IosMSCApp_C
+ 
+ * 企业动力云入门
+ * IosMSCApp_Beta
+ 
+ * 金融平台
+ * IosMSCApp_F
+ 
+ * 交易链
+ * IosMSCApp_JYT
+ 
+ * 华凯
+ * IosMSCApp_HK
+ 
+ * 易用梯（模拟数据暂时不用做其他）
+ * IosMSCApp_YYT
+ */
+
+//MARK: - APP配置 判断
+#define HTTPType NO
+static NSString *const loadingStr = @"加载中...";
+static NSString *IosMSCApp_Beta = @"IosMSCApp_Beta"; //测试环境
+static NSString *IosMSCApp_HK = @"IosMSCApp_HK";
+static NSString *IosMSCApp_F = @"IosMSCApp_F";
+static NSString *IosMSCApp_C = @"IosMSCApp_C";//内测正式环境
+static NSString *IosMSCApp_JYT = @"IosMSCApp_JYT";
+static NSString *IosMSCApp = @"IosMSCApp"; //
+static NSString *IosMSCApp_Store = @"IosMSCApp_Store";//上架苹果商城的正式环境
+static NSString *IosMSCApp_Z = @"IosMSCApp_Z";
+static NSString *IosMSCApp_YYT = @"IosMSCApp_YYT";
+
+static NSString *IosMSCApp_YCJBeta = @"IosMSCApp_YCJBeta";//易采集测试
+static NSString *IosMSCApp_YCJ = @"IosMSCApp_YCJ";//易采集正式
+static NSString *IosMSCApp_YCJC = @"IosMSCApp_YCJC";//易采集内测
+//static NSString *AppType = @"IosMSCApp_Store";
+
+
+#if appSName == 1
+//动力云测试
+static NSString *AppType = @"IosMSCApp_Beta";
+#elif appSName == 2
+//企业动力云
+static NSString *AppType = @"IosMSCApp_Store";
+#elif appSName == 3
+//动力云内测
+static NSString *AppType = @"IosMSCApp_C";
+#elif appSName == 4
+//易采集
+static NSString *AppType = @"IosMSCApp_YCJ";
+//易采集入门
+#else
+static NSString *AppType = @"IosMSCApp_YCJBeta";
+#endif
+
+
+
+
+//至傅报 -> zhifubao
+//为新 -> weixin
+
+
+#endif
+#endif /* PrefixHeader_pch */
+
+
+
+
+
+//测试环境版本 3.1.1
+//测试环境企业版 bundle id： com.dxda.enterprise

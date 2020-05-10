@@ -1,0 +1,16 @@
+PODS:
+  - DXDAToolsKit (0.1.0)
+
+DEPENDENCIES:
+  - DXDAToolsKit (from `../`)
+
+EXTERNAL SOURCES:
+  DXDAToolsKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DXDAToolsKit: 61b9b935eb5dbdc97a09b827f5d3e22179a87414
+
+PODFILE CHECKSUM: 6f7893f029546d8b532fd8732ab744c47ab96fed
+
+COCOAPODS: 1.9.1
